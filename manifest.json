@@ -1,0 +1,20 @@
+{
+    "name": "Chrome Url Backuper",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "Test",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "declarativeContent",
+        "storage",
+        "tabs",
+        "downloads",
+        "activeTab",
+        "scripting"
+    ]
+}
