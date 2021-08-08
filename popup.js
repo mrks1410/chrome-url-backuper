@@ -4,7 +4,13 @@ button.onclick = e => {
     chrome.tabs.query({}, tabs => {
         const list = [];
         for (let tab of tabs) {
-            list.push(tab.url);
+            const obj = {
+                title: "",
+                url: "",
+            }
+            obj.title = tab.title;
+            obj.url = tab.url;
+            list.push(obj);
         }
         const content = {
             url_list: list
